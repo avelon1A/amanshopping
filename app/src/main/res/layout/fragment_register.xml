@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:layout_margin="20dp"
+tools:context=".fragment.RegisterFragment">
+
+<!-- Registration Text -->
+<TextView
+    android:id="@+id/registerTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    android:textSize="24sp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="20dp"/>
+
+<!-- Example: TextInputLayout for Username -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/usernameInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/registerTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Example: TextInputLayout for Email -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/emailInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/usernameInputLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Example: TextInputLayout for Password -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/passwordInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Example: Register Button -->
+<Button
+    android:id="@+id/registerButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

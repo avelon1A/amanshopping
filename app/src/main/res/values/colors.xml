@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="my_light_primary">#3F51B5</color> <!-- Change this to your desired primary color -->
+        <color name="my_light_primary_variant">#303F9F</color> <!-- Change this to a variant of your primary color -->
+        <color name="my_light_secondary">#82B1FF</color> <!-- Change this to your desired secondary color -->
+        <color name="my_light_secondary_variant">#00E5FF</color> <!-- Change this to a variant of your secondary color -->
+
+        <!-- Dark Theme Colors -->
+        <color name="my_dark_primary">#2196F3</color> <!-- Change this to your desired primary color for dark theme -->
+        <color name="my_dark_primary_variant">#1565C0</color> <!-- Change this to a variant of your primary color for dark theme -->
+        <color name="my_dark_secondary">#FFEA00</color> <!-- Change this to your desired secondary color for dark theme -->
+        <color name="my_dark_secondary_variant">#00E676</color> <!-- Change this to a variant of your secondary color for dark theme -->
+</resources>

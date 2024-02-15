@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "343183425153",
+    "project_id": "amanshopping-e1f46",
+    "storage_bucket": "amanshopping-e1f46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343183425153:android:93721ce6bcba092853d780",
+        "android_client_info": {
+          "package_name": "com.example.amanshopping"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZB1HVfj6KSZLj5QgXEy7jeLdZZ0KJHDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
