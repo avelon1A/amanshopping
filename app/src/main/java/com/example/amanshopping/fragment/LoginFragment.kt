@@ -8,12 +8,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.amanshopping.databinding.FragmentLoginBinding
+import com.example.amanshopping.uitl.Resource
 import com.example.amanshopping.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginFragment : Fragment() {
+class  LoginFragment : Fragment() {
 
 
     private var _binding: FragmentLoginBinding? = null
@@ -43,10 +45,6 @@ class LoginFragment : Fragment() {
             viewModel.login(email,password)
         }
         viewModel.result.observe(viewLifecycleOwner){
-            if (it.isNotEmpty()){
-                result = it
-                toast(result)
-            }
         }
 
     }

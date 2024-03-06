@@ -8,5 +8,5 @@ sealed class Resource<T>(
     class Success<T>(data: T):Resource<T>(data)
     class Error<T>(message:String):Resource<T>(message = message)
     class Loading<T>:Resource<T>()
-
+    class unSpecified<T>:Resource<T>()
 }
