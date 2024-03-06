@@ -18,7 +18,12 @@
         android:id="@+id/loginFragment"
         android:name="com.example.amanshopping.fragment.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_shopingFragment"
+            app:destination="@id/shopingFragment"
+           />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.amanshopping.fragment.RegisterFragment"
@@ -36,4 +41,9 @@
             android:id="@+id/action_loginOrRegisterFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/shopingFragment"
+        android:name="com.example.amanshopping.ShopingFragment"
+        android:label="fragment_shoping"
+        tools:layout="@layout/fragment_shoping" />
 </navigation>

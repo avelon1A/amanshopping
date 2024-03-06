@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.amanshopping.R
 import com.example.amanshopping.databinding.FragmentLoginBinding
 import com.example.amanshopping.uitl.Resource
 import com.example.amanshopping.viewmodel.LoginViewModel
@@ -55,11 +56,11 @@ class  LoginFragment : Fragment() {
 
             }
               is Resource.Success -> {
-
+             findNavController().navigate(R.id.action_loginFragment_to_shopingFragment)
               }
-
-
-              else -> {}
+              else -> {
+                toast(it.message)
+              }
           }
       }
         }
@@ -67,7 +68,7 @@ class  LoginFragment : Fragment() {
     }
 
     private fun toast(result: String?) {
-        Toast.makeText(requireContext(), result, Toast.LENGTH_SHORT)?.show()
+        Toast.makeText(requireContext(), result, Toast.LENGTH_LONG)?.show()
     }
 
 
