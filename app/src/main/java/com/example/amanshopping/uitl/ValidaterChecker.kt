@@ -8,7 +8,7 @@ fun emailValid(email:String):RegisterValidation{
         return RegisterValidation.Failed("email cannot be empty")
 
     }
-    if(!Patterns.EMAIL_ADDRESS.equals(email))
+    if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
     {
         return RegisterValidation.Failed("not a valid email")
     }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -13,6 +14,9 @@ import com.example.amanshopping.databinding.FragmentLoginBinding
 import com.example.amanshopping.uitl.Resource
 import com.example.amanshopping.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import java.lang.Error
 
 @AndroidEntryPoint
 class  LoginFragment : Fragment() {
@@ -44,7 +48,20 @@ class  LoginFragment : Fragment() {
             val password = binding.passwordEditText.text.toString()
             viewModel.login(email,password)
         }
-        viewModel.result.observe(viewLifecycleOwner){
+  lifecycleScope.launch(){
+      viewModel.result.collect{
+          when(it){
+            is Resource.Loading -> {
+
+            }
+              is Resource.Success -> {
+
+              }
+
+
+              else -> {}
+          }
+      }
         }
 
     }
