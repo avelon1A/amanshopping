@@ -59,7 +59,7 @@ class  LoginFragment : Fragment() {
              findNavController().navigate(R.id.action_loginFragment_to_shopingFragment)
               }
               else -> {
-                toast(it.message)
+                toast(getString(R.string.loggin_failed))
               }
           }
       }

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
+    android:id="@+id/nav"
     app:startDestination="@id/welcomeFragment">
 
     <fragment
@@ -45,5 +45,30 @@
         android:id="@+id/shopingFragment"
         android:name="com.example.amanshopping.ShopingFragment"
         android:label="fragment_shoping"
-        tools:layout="@layout/fragment_shoping" />
+        tools:layout="@layout/fragment_shoping" >
+        <action
+            android:id="@+id/action_shopingFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_shopingFragment_to_accountFrament"
+            app:destination="@id/accountFrament" />
+        <action
+            android:id="@+id/action_shopingFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.amanshopping.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/accountFrament"
+        android:name="com.example.amanshopping.AccountFrament"
+        android:label="fragment_account_frament"
+        tools:layout="@layout/fragment_account_frament" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.amanshopping.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>
