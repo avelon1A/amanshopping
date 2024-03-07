@@ -58,17 +58,17 @@
     </fragment>
     <fragment
         android:id="@+id/categoryFragment"
-        android:name="com.example.amanshopping.CategoryFragment"
+        android:name="com.example.amanshopping.fragment.CategoryFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_category" />
     <fragment
         android:id="@+id/accountFrament"
-        android:name="com.example.amanshopping.AccountFrament"
+        android:name="com.example.amanshopping.fragment.AccountFrament"
         android:label="fragment_account_frament"
         tools:layout="@layout/fragment_account_frament" />
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.example.amanshopping.CartFragment"
+        android:name="com.example.amanshopping.fragment.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
 </navigation>

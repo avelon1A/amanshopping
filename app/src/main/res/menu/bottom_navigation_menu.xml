@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="home"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/shopingFragment"
+        />
+    <item android:title="categories"
+        android:icon="@drawable/baseline_local_florist_24"
+        android:id="@+id/categoryFragment"/>
+    <item android:title="cart"
+        android:icon ="@drawable/baseline_shopping_cart_24"
+        android:id="@+id/cartFragment"/>
+    <item android:title="account"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:id="@+id/accountFrament"/>
+</menu>
