@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity(),NavController.OnDestinationChangedListe
 
     }
     override fun onBackPressed() {
-        val currentDestination = findNavController(R.id.nav).currentDestination
-        if (currentDestination?.id == R.id.shopingFragment) {
+        val currentFragment = navController.currentDestination?.id
+
+        if (currentFragment == R.id.shopingFragment) {
             finish()
         } else {
             super.onBackPressed()
