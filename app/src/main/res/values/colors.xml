@@ -6,7 +6,7 @@
         <color name="my_light_primary_variant">#303F9F</color> <!-- Change this to a variant of your primary color -->
         <color name="my_light_secondary">#82B1FF</color> <!-- Change this to your desired secondary color -->
         <color name="my_light_secondary_variant">#00E5FF</color> <!-- Change this to a variant of your secondary color -->
-
+        <color name="selected_icons_color">#3c77e7</color>
         <!-- Dark Theme Colors -->
         <color name="my_dark_primary">#2196F3</color> <!-- Change this to your desired primary color for dark theme -->
         <color name="my_dark_primary_variant">#1565C0</color> <!-- Change this to a variant of your primary color for dark theme -->
