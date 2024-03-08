@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_loginOrRegisterFragment"
-            app:destination="@id/loginOrRegisterFragment" />
+            app:destination="@id/loginOrRegisterFragment"
+            app:enterAnim="@anim/form_right"
+            app:exitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -22,7 +24,10 @@
         <action
             android:id="@+id/action_loginFragment_to_shopingFragment"
             app:destination="@id/shopingFragment"
-           />
+            app:enterAnim="@anim/form_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -36,10 +41,15 @@
         tools:layout="@layout/fragment_login_or_register" >
         <action
             android:id="@+id/action_loginOrRegisterFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/form_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_loginOrRegisterFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/form_right" />
     </fragment>
     <fragment
         android:id="@+id/shopingFragment"

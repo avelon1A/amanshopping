@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.amanshopping.data.SharedPreferencesHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.FirebaseApp
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(),NavController.OnDestinationChangedListe
     private lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment
     private var container: ConstraintLayout? = null
+    private lateinit var sharedPreferencesHelper: SharedPreferencesHelper
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +36,23 @@ class MainActivity : AppCompatActivity(),NavController.OnDestinationChangedListe
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         navController.addOnDestinationChangedListener(this)
         bottomNavigationView?.setOnNavigationItemReselectedListener(this)
+        sharedPreferencesHelper = SharedPreferencesHelper(this)
 
         binding()
+        checkLoginstatus()
 
     }
+
+    private fun checkLoginstatus() {
+        val isLoggedIn = sharedPreferencesHelper.isLoginStatusSaved()
+
+        if (isLoggedIn) {
+            navController.navigate(R.id.shopingFragment)
+        } else {
+
+        }
+    }
+
     override fun onBackPressed() {
         val currentFragment = navController.currentDestination?.id
 

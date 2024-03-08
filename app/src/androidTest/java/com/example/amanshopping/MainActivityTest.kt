@@ -29,7 +29,7 @@ class MainActivityTest {
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
 
         activityScenario.onActivity { activity ->
-            val navController = Navigation.findNavController(activity, R.id.navigation)
+            val navController = Navigation.findNavController(activity, R.id.nav)
             activity.runOnUiThread {
                 navController.navigate(R.id.shopingFragment)
             }

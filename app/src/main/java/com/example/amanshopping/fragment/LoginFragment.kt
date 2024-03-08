@@ -12,11 +12,14 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.amanshopping.R
 import com.example.amanshopping.databinding.FragmentLoginBinding
+import com.example.amanshopping.uitl.RegisterValidation
 import com.example.amanshopping.uitl.Resource
 import com.example.amanshopping.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.lang.Error
 
 @AndroidEntryPoint
@@ -64,6 +67,28 @@ class  LoginFragment : Fragment() {
           }
       }
         }
+        lifecycleScope.launch {
+            viewModel.validation.collect(){
+                if(it.email is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.usernameEditText.apply {
+                            requestFocus()
+                            error = it.email.message
+                        }
+                    }
+                }
+                if(it.password is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.passwordEditText.apply {
+                            requestFocus()
+                            error = it.password.message
+                        }
+                    }
+                }
+
+            }
+        }
+
 
     }
 
