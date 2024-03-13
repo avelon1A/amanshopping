@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/shopingFragment"
-        android:name="com.example.amanshopping.ShopingFragment"
+        android:name="com.example.amanshopping.fragment.ShopingFragment"
         android:label="fragment_shoping"
         tools:layout="@layout/fragment_shoping" >
         <action

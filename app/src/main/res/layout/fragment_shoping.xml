@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/shopingFragment"
-    tools:context=".ShopingFragment">
+    tools:context=".fragment.ShopingFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/homeHeader"
@@ -46,19 +46,51 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
      <ImageView
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:src="@drawable/ic_scan"
-        android:padding="100dp"/>
+         android:background="@drawable/search_box_background"
+        android:padding="10dp"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
         <ImageView
             android:layout_width="40dp"
             android:layout_height="match_parent"
+            android:background="@drawable/search_box_background"
             android:src="@drawable/ic_microphone"
-            android:padding="100dp"/>
+            android:padding="10dp"/>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabRippleColor="@color/white"
+        app:tabSelectedTextColor="@color/black"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/text_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeHeader"
+        android:layout_marginTop="5dp"
+        >
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 

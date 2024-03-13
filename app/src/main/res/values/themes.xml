@@ -9,4 +9,10 @@
     </style>
 
     <style name="Theme.Amanshopping" parent="Base.Theme.Amanshopping" />
+    <style name="tabLayout_text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
 </resources>
