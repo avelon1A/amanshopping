@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loggin_failed">Loggin failed</string>
     <string name="wellcome">wellcome</string>
+    <string name="search_now">search now</string>
 </resources>

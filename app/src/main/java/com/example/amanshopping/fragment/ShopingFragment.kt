@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.amanshopping.R
+
 import com.example.amanshopping.adapter.HomeViewpaggerAdapter
 import com.example.amanshopping.databinding.FragmentShopingBinding
 import com.example.amanshopping.fragment.catogeries.AccessoryCategory
@@ -16,7 +15,9 @@ import com.example.amanshopping.fragment.catogeries.FurnitureCategory
 import com.example.amanshopping.fragment.catogeries.MainCategory
 import com.example.amanshopping.fragment.catogeries.TableCategory
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShopingFragment : Fragment() {
    private var _binding:FragmentShopingBinding? = null
     private val binding get() = _binding!!
@@ -58,7 +59,6 @@ class ShopingFragment : Fragment() {
 
             }
         }.attach()
-
 
     }
 

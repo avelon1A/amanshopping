@@ -75,7 +75,11 @@
         android:id="@+id/accountFrament"
         android:name="com.example.amanshopping.fragment.AccountFrament"
         android:label="fragment_account_frament"
-        tools:layout="@layout/fragment_account_frament" />
+        tools:layout="@layout/fragment_account_frament" >
+        <action
+            android:id="@+id/action_accountFrament_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.amanshopping.fragment.CartFragment"

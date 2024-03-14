@@ -70,6 +70,11 @@ class MainActivity : AppCompatActivity(),NavController.OnDestinationChangedListe
     ) {
       when(destination.id){
           R.id.shopingFragment -> bottomNavigationView?.visibility  = View.VISIBLE
+          R.id.categoryFragment -> bottomNavigationView?.visibility  = View.VISIBLE
+          R.id.accountFrament -> bottomNavigationView?.visibility  = View.VISIBLE
+          R.id.cartFragment -> bottomNavigationView?.visibility  = View.VISIBLE
+
+          else ->  bottomNavigationView?.visibility  = View.GONE
       }
     }
 

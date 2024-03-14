@@ -20,4 +20,8 @@ class SharedPreferencesHelper @Inject constructor(context: Context) {
     fun isLoginStatusSaved(): Boolean {
         return sharedPreferences.getBoolean(LOGIN_STATUS_KEY, false)
     }
+
+    fun logout() {
+        sharedPreferences.edit().clear()?.apply()
+    }
 }
